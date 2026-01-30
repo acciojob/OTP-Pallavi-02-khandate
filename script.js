@@ -1,30 +1,15 @@
 //your JS code here. If required.
 
+document.querySelectorAll('.code').forEach((input, index) => {
+    input.addEventListener('input', () => {
+        if (input.value.length === 1 && index < 5) {
+            document.querySelector(`.code:nth-child(${index + 2})`).focus();
+        }
+    });
 
-const inputs = document.querySelectorAll(".code");
-
-// Focus first box on load
-inputs[0].focus();
-
-inputs.forEach((input, index) => {
-
-  // Move forward when typing
-  input.addEventListener("input", () => {
-    if (input.value && index < inputs.length - 1) {
-      inputs[index + 1].focus();
-    }
-  });
-
-  // Move backward on backspace
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Backspace") {
-
-      if (input.value === "" && index > 0) {
-        inputs[index - 1].focus();
-        inputs[index - 1].value = "";
-      }
-    }
-  });
-
+    input.addEventListener('keydown', (event) => {
+        if (event.key === 'Backspace' && input.value.length === 0 && index > 0) {
+            document.querySelector(`.code:nth-child(${index})`).focus();
+        }
+    });
 });
-
