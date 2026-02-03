@@ -1,1 +1,77 @@
 /*  your css code here. If applicable */
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #fafafa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Main Card */
+    .otp-wrapper {
+      border: 2px solid #000;
+      border-radius: 14px;
+      padding: 45px 55px;
+      width: 750px;
+      max-width: 95%;
+      text-align: center;
+      background: #fff;
+    }
+
+    #verification_heading {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    #verification_subtext {
+      color: #555;
+      font-size: 14px;
+      max-width: 520px;
+      margin: 0 auto 35px;
+      line-height: 1.5;
+    }
+
+    /* OTP container */
+    .code-container {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 35px;
+    }
+
+    .code {
+      width: 85px;
+      height: 95px;
+      font-size: 48px;
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      outline: none;
+      color: #777;
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+      transition: 0.2s;
+    }
+
+    .code:focus {
+      border-color: #222;
+      color: #222;
+    }
+
+    /* Bottom info box */
+    .info-box {
+      background: #eee;
+      color: #777;
+      padding: 14px 20px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: inline-block;
+      max-width: 420px;
+    }
